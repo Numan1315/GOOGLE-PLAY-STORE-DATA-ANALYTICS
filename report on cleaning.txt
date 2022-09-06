@@ -1,0 +1,35 @@
+the data set has 13 columns and 10841 rows.
+The google playstore data set has missing values in the form of 'varies with the device','nan','unrated' and ' '.
+
+The App attribute has repeated values and is dropped.
+the category attribute has 16 missing values.
+the missing value is replcaed by the mode of consecutive 20 elements if it falls in between that position.
+
+the ContentRating has 13 missing values.
+if the app falls in the category of 'Dating' then the missing value is replaced by 'Mature 17' or else 'Everyone'.
+
+Size attribute has 1695 missing values.the missing value is replaced by'0M' in the beginning. 
+The postfix M and K is replaced and multiplied with their value that is M is replaced and multiplied by 1 and and K is replaced and multiplied by 1/1000
+the Missing value is replaced with the average size of the apps for that given category.
+then it is converted from categorical to numerical.
+
+
+the 'current ver' attribute has 1460 missing values.Since its not important for getting insights we drop the entire column.
+the 'Android ver' attribute has 1363 missing values and the postfix 'and up'.
+the missing values are first replaced by 0.0 and the postfix is removed and the values are converted to integer.
+the missing values are then replaced with their median.
+
+The Rating of the app has 1474 missing values.Since the rating follows skewed distribution,its replaced with its median.
+
+The Review attribute has 29 missing values and cannot be interpreted and therefore replaced by 0.
+
+we consider all apps having installs less than 5000 has outliers since it will give misleading insights.
+An app with 1 install will be given 5 star rating and therefore leading to misleading insights.
+
+we dont consider rating values as outliers because they play an important role in giving proper insights.
+2 rows with wrong type of data are dropped.
+
+after cleaning the missing values and removing duplicated values and outliers
+the data set consists of 12 columns and 6976 rows.  
+
+     
